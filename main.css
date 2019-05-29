@@ -1,0 +1,195 @@
+:root {
+    --color-primary: #6857db;
+    --color-primary-light: #5642d7;
+    --color-primary-dark: #3524a8;
+    
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-dark-2);
+    background: linear-gradient(270deg, var(--color-primary-dark), var(--color-primary-light), var(--color-grey-light-4), var(--color-grey-light-1));
+    background-position: 100% 50%;
+    background-size: 800% 800%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    transition: background 1s ease;
+    transition-delay: .4s;
+}
+
+.body-color {
+    background-position: 0% 50%;
+}
+
+#toggle-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 10rem;
+    width: 10rem;
+    line-height: 7.5rem;
+    text-align: center;
+    background-color: dodgerblue;
+    color: #fff;
+    border-bottom-left-radius: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.container {
+    font-size: 1.3rem;
+    margin: 8rem auto;
+    max-width: 120rem;
+    min-height: 50rem;
+    background-color: transparent;
+    perspective: 150rem;
+    transition: all .3s ease;
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+    
+    -moz-transition: -moz-transform 0.6s;
+    transition: transform 0.6s;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.front-websites,
+.back-software {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    padding: 3rem;
+}
+
+.front-websites {
+    background: var(--color-grey-light-2);
+}
+
+.back-software {
+    transform: rotateY(180deg);
+    background-color: var(--color-grey-dark-1);
+    color: var(--color-grey-light-1);
+    font-family: Consolas, monaco, monospace;
+    text-align: left;
+}
+
+.fade-text {
+    animation: fadeButtonText 1s;
+}
+
+@keyframes fadeButtonText {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.command-line {
+    position: relative;
+}
+
+.command-line:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: -8px;
+    display: inline-block;
+    background-color: #eee;
+    width: 8px;
+    height: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1.0 ; }
+    50% { opacity: 0.0 ; }
+    100% { opacity: 1.0 ; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
